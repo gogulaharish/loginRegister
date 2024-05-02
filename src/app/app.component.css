@@ -1,0 +1,41 @@
+.container{
+    padding: 40px; 
+    max-width: 600px;
+    background: #4F4F4F;
+    margin: 100px auto;
+    border-radius: 15px;
+}
+
+.tab-group{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    border-radius: 7px;
+
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    li a{
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        background: rgb(100, 108, 100);
+        color: darkseagreen;
+        padding: 15px;
+        float:left;
+        width: 50%;
+        text-align: center;
+
+        &:hover{
+            color: white;
+            background: rgb(63, 141, 80);
+        }
+    }
+
+    .active a{
+        color: white;
+        background-color: mediumseagreen;
+    }
+}
