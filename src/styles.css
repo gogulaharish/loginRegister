@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    /* background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); */
+    background-image: linear-gradient(to bottom right, rgb(236, 82, 82), rgb(13, 156, 178));
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 629px;
+    font-family: 'Numans', sans-serif;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

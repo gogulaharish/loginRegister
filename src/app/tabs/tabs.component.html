@@ -1,0 +1,26 @@
+<div class="container">
+    <ul class="tab-group">
+      <li class="tab"(click)="activeTab = 'login'" [ngClass]="{'active': activeTab==='login'}">
+        <a>Log In</a></li>
+      <li class="tab"(click)="activeTab = 'register'" [ngClass]="{'active': activeTab==='register'}">
+        <a>Sign Up</a></li>
+    </ul>
+     <div [ngSwitch]="activeTab">
+      <app-login *ngSwitchCase="'login'"></app-login>
+      <app-register (registrationSuccess)="activateTab('login')" *ngSwitchCase="'register'"></app-register>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <ul class="tab-group">
+      <li class="tab"(click)="activeTab = 'login'" [ngClass]="{'active': activeTab==='login'}">
+        <a routerLink="login">Log In</a></li>
+      <li class="tab"(click)="activeTab = 'register'" [ngClass]="{'active': activeTab==='register'}">
+        <a routerLink="register">Sign Up</a></li>
+    </ul>
+     <router-outlet></router-outlet>
+     <div [ngSwitch]="activeTab">
+      <app-login *ngSwitchCase="'login'"></app-login>
+      <app-register *ngSwitchCase="'register'"></app-register>
+    </div>
+</div> -->

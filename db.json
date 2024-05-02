@@ -1,0 +1,71 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Harish",
+      "lastName": "Gogula",
+      "email": "harish@gmail.com",
+      "password": "harish123"
+    },
+    {
+      "firstName": "gggg",
+      "lastName": "cccx",
+      "email": "gga@gmail.com",
+      "password": "dsdhsdsd",
+      "id": 2
+    },
+    {
+      "firstName": "fff",
+      "lastName": "dsfdssdf",
+      "email": "fdsfds@gmail.com",
+      "password": "vvvcbgbghg",
+      "id": 3
+    },
+    {
+      "firstName": "test",
+      "lastName": "test",
+      "email": "test@gmail.com",
+      "password": "test123",
+      "id": 4
+    },
+    {
+      "firstName": "krishna",
+      "lastName": "kunduru",
+      "email": "dsdjd@gmail.com",
+      "password": "kittu123",
+      "id": 5
+    },
+    {
+      "firstName": "hhhh",
+      "lastName": "hgf",
+      "email": "jhjkj@gmail.com",
+      "password": "qqqqq",
+      "id": 6
+    },
+    {
+      "firstName": "Krishna",
+      "lastName": "Kunduru",
+      "email": "Krishna_Kunduru@ceo.com",
+      "password": "Kittu@320",
+      "id": 7
+    }
+  ],
+  "cars":[
+    {
+      "id":1,
+      "name":"Tata"
+    },
+    {
+      "id":2,
+      "name":"Honda"
+    },
+    {
+      "id":3,
+      "name":"Renault"
+    },
+    {
+      "id":4,
+      "name":"Hyundai"
+    }
+  ]
+}

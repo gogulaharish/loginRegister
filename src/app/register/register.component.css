@@ -8,13 +8,17 @@ label{
     left:13px;
     color: darkseagreen;
     transform:translateY(6px);
+    transition:all 0.25s ease;
     pointer-events: none;
 }  
 
-label .active {
-    transform:translateY(50px);
+label.active {
+    transform:translateY(-30px);
     left:2px;
     font-size:14px;
+    .req{
+      opacity: 0;
+  }
 }
 
 label.highlight{
@@ -26,7 +30,7 @@ label.highlight{
     color:mediumseagreen;
 }
 
-input{
+.form-control{
     width: 100%;
     height: 100%;
     background: none;
@@ -79,3 +83,9 @@ input{
       }
     }
   }
+
+.error{
+    color: rgb(228, 104, 98);
+    padding-left: 2px;
+    font-size: 15px;
+} 

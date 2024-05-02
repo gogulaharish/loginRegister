@@ -1,8 +1,19 @@
+
+/* *{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    font-family:arial;
+  } 
+  body{background:red;} */
+
+
+  
 .container{
     padding: 40px; 
-    max-width: 600px;
+    max-width: 550px;
     background: #4F4F4F;
-    margin: 100px auto;
+    margin: 100px auto; 
     border-radius: 15px;
 }
 
@@ -10,7 +21,7 @@
     list-style: none;
     padding: 0;
     margin: 0 0 40px 0;
-    border-radius: 7px;
+   
 
     &:after{
         content: "";
@@ -39,3 +50,15 @@
         background-color: mediumseagreen;
     }
 }
+
+/* .vh-100{
+    background-color: #9A616D;
+
+
+} */
+
+/* .image{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/free-vector/vector-abstract-color-waves-design-element_2065-438.jpg?w=740&t=st=1707311246~exp=1707311846~hmac=1a97a6108988092614f8df18f15545260d52ee79ee683cda51cf4c48700fd293');
+} */

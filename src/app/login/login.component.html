@@ -1,15 +1,30 @@
-<form>
+<form [formGroup] = "loginForm" (ngSubmit)="login()">
     <div class="field-wrap">
-        <label>
+        <label [ngClass]="{'active': loginForm.controls['email'].value, 'highlight': loginForm.controls['email'].value, 'inactive': !loginForm.controls['email'].value}">
             Email Address<span class="req">*</span>
         </label>
-        <input type="email" required autocomplete="off"/>
+        <input type="email" class="form-control"[ngClass]="{ 'is-invalid': submitted && f.email.errors }" formControlName="email" autocomplete="off"/>
+        <div *ngIf="submitted && f.email.errors" class="error">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Invalid email address</div>
+        </div>
     </div>    
     <div class="field-wrap">
-        <label>
+        <label [ngClass]="{'active': loginForm.controls['password'].value, 'highlight': loginForm.controls['password'].value, 'inactive': !loginForm.controls['password'].value}">
             Password<span class="req">*</span>
         </label>
-        <input type="password" required autocomplete="off"/>
+        <input type="password" class="form-control"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" formControlName="password" autocomplete="off"/> 
+        <div *ngIf="submitted && f.password.errors" class="error">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+        </div>   
+        <!-- <div class="input-group-append">
+            <button class="btn btn-outline-primary" type="button" (click)="togglePasswordVisibility()">
+              <i class="fa" [ngClass]="{'fa-eye': hide, 'fa-eye-slash': !hide}"></i>
+            </button>
+          </div>  -->
+        <!-- <div *ngIf="f.password.errors && (f.password.dirty || f.password.touched)" class="error">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+        </div> -->
     </div>
-    <button class="button button-block">LOG IN</button>
+    <button type="submit" class="button button-block">LOG IN</button>
 </form>

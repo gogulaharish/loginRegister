@@ -1,3 +1,5 @@
+
+
 .field-wrap {
     position:relative;
     margin-bottom:40px;
@@ -9,12 +11,16 @@ label{
     color: darkseagreen;
     transform:translateY(6px);
     pointer-events: none;
+    transition:all 0.25s ease;
 }  
 
-label .active {
-    transform:translateY(50px);
+label.active {
+    transform:translateY(-30px);
     left:2px;
     font-size:14px;
+    .req{
+        opacity: 0;
+    }
 }
 
 label.highlight{
@@ -26,7 +32,7 @@ label.highlight{
     color:mediumseagreen;
 }
 
-input{
+.form-control{
     width: 100%;
     height: 100%;
     background: none;
@@ -60,5 +66,10 @@ input{
     display:block;
     width:100%;
     height: 60px
+}
+
+.error{
+    color: rgb(254, 59, 59);
+    padding-left: 2px;
 }
 

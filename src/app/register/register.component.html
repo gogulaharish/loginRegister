@@ -1,29 +1,41 @@
-<form>
+<form [formGroup]="registerForm" (ngSubmit)="register()">
     <div class="top-row">
         <div class="field-wrap">
-            <label>
+            <label [ngClass]="{'active': registerForm.controls['firstName'].value, 'highlight': registerForm.controls['firstName'].value, 'inactive': !registerForm.controls['firstName'].value}">
                 First Name<span class="req">*</span>
             </label>
-            <input type="text" required autocomplete="off" />
+            <input type="text" class="form-control"[ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" formControlName="firstName" required autocomplete="off"/>
+            <div *ngIf="submitted && f.firstName.errors" class="error">
+                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+            </div> 
         </div>
         <div class="field-wrap">
-            <label>
+            <label [ngClass]="{'active': registerForm.controls['lastName'].value, 'highlight': registerForm.controls['lastName'].value, 'inactive': !registerForm.controls['lastName'].value}">
                 Last Name<span class="req">*</span>
             </label>
-            <input type="text" required autocomplete="off" />
+            <input type="text" class="form-control"[ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" formControlName="lastName"  autocomplete="off" />
+            <div *ngIf="submitted && f.lastName.errors" class="error">
+                <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+            </div> 
         </div>
     </div>
     <div class="field-wrap">
-        <label>
+        <label [ngClass]="{'active': registerForm.controls['email'].value, 'highlight': registerForm.controls['email'].value, 'inactive': !registerForm.controls['email'].value}">
             Email Address<span class="req">*</span>
         </label>
-        <input type="email" required autocomplete="off" />
+        <input type="email" class="form-control"[ngClass]="{ 'is-invalid': submitted && f.email.errors }" formControlName="email"  required autocomplete="off" />
+        <div *ngIf="submitted && f.email.errors" class="error">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+        </div> 
     </div>
     <div class="field-wrap">
-        <label>
+        <label [ngClass]="{'active': registerForm.controls['password'].value, 'highlight': registerForm.controls['password'].value, 'inactive': !registerForm.controls['password'].value}">
             Password<span class="req">*</span>
         </label>
-        <input type="password" required autocomplete="off" />
+        <input type="password" class="form-control"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" formControlName="password"  required autocomplete="off" />
+        <div *ngIf="submitted && f.password.errors" class="error">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+        </div> 
     </div>
-    <button class="button button-block">REGISTER</button>
+    <button class="button button-block" type="submit">REGISTER</button>
 </form>
